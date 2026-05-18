@@ -1,0 +1,21 @@
+services:
+  hapifyme:
+    image: georgedatq/hapifyme:v1
+    container_name: hapifyme
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    volumes:
+      - ./config/config.php:/var/www/html/config/config.php
+
+  mysql:
+    image: mysql:5.7
+    container_name: hapifyme-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hapify_social
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
