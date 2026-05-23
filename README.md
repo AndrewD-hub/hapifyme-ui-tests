@@ -54,14 +54,14 @@ Componenta API testează fluxul complet de viață al unui utilizator hapifyMe.
 
 Fluxul testat:
 
-Register user
-Retrieve confirmation token folosind Awaitility
-Confirm email
-Login user
-Get profile
-Update profile
-Delete profile
-Negative check după ștergere
+1.Register user
+2.Retrieve confirmation token folosind Awaitility
+3.Confirm email
+4.Login user
+5.Get profile
+6.Update profile
+7.Delete profile
+8.Negative check după ștergere
 
 Endpoint-urile API folosesc base URL-ul actualizat:
 
@@ -73,41 +73,35 @@ com/hapifyme/api/models
 
 Conține clase POJO pentru request body:
 
-RegisterRequest
-LoginRequest
-UpdateProfileRequest
+1.RegisterRequest
+2.LoginRequest
+3.UpdateProfileRequest
 com/hapifyme/api/utils
 
 Conține clase utilitare:
 
-DataGenerator - generează date dinamice pentru teste
-ApiPoller - folosește Awaitility pentru a aștepta confirmation_token
+1.DataGenerator - generează date dinamice pentru teste
+2.ApiPoller - folosește Awaitility pentru a aștepta confirmation_token
 com/hapifyme/api/tests
 
 Conține testul E2E:
 
-UserLifecycleTest
+3.UserLifecycleTest
 
 ## Rulare teste
 
-Pentru rularea tuturor testelor:
+Pentru rularea tuturor testelor: mvn clean test
 
-mvn clean test
-
-Pentru rulare cu date custom pentru partea UI:
-
-mvn clean test -DbaseUrl=https://test.hapifyme.com -DtestEmail=email@test.com -DtestPassword=ParolaTa
+Pentru rulare cu date custom pentru partea UI: mvn clean test -DbaseUrl=https://test.hapifyme.com -DtestEmail=email@test.com -DtestPassword=ParolaTa
 
 ## Raport HTML
 
-După rularea testelor UI, raportul Cucumber se găsește aici:
-
-target/cucumber-report.html
+După rularea testelor UI, raportul Cucumber se găsește aici: target/cucumber-report.html
 
 ## Observații
 
-Partea UI poate folosi setup-ul local/Docker din etapa anterioară a proiectului.
-Partea API folosește URL-ul actualizat al aplicației hapifyMe.
-Testele API creează date dinamice, confirmă contul, fac login, verifică profilul, actualizează profilul și șterg utilizatorul creat.
-Awaitility este folosit pentru a aștepta generarea asincronă a token-ului de confirmare.
-Dacă locatorii UI diferă pe versiunea locală a aplicației, se modifică doar clasele din pages, nu Step Definitions.
+1.Partea UI poate folosi setup-ul local/Docker din etapa anterioară a proiectului.
+2.Partea API folosește URL-ul actualizat al aplicației hapifyMe.
+3.Testele API creează date dinamice, confirmă contul, fac login, verifică profilul, actualizează profilul și șterg utilizatorul creat.
+4.Awaitility este folosit pentru a aștepta generarea asincronă a token-ului de confirmare.
+5.Dacă locatorii UI diferă pe versiunea locală a aplicației, se modifică doar clasele din pages, nu Step Definitions.
