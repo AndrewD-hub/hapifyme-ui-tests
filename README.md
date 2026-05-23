@@ -92,7 +92,8 @@ Conține testul E2E:
 
 Pentru rularea tuturor testelor: mvn clean test
 
-Pentru rulare cu date custom pentru partea UI: mvn clean test -DbaseUrl=https://test.hapifyme.com -DtestEmail=email@test.com -DtestPassword=ParolaTa
+Pentru rulare cu date custom pentru partea UI:
+mvn clean test -DbaseUrl=https://test.hapifyme.com -DtestEmail=email@test.com -DtestPassword=ParolaTa
 
 ## Raport HTML
 
