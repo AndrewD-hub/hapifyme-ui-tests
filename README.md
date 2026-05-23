@@ -54,14 +54,14 @@ Componenta API testează fluxul complet de viață al unui utilizator hapifyMe.
 
 Fluxul testat:
 
- 1.Register user
- 2.Retrieve confirmation token folosind Awaitility
- 3.Confirm email
- 4.Login user
- 5.Get profile
- 6.Update profile
- 7.Delete profile
- 8.Negative check după ștergere
+1. Register user
+2. Retrieve confirmation token folosind Awaitility
+3. Confirm email
+4. Login user
+5. Get profile
+6. Update profile
+7. Delete profile
+8. Negative check după ștergere
 
 Endpoint-urile API folosesc base URL-ul actualizat:
 
@@ -73,20 +73,20 @@ com/hapifyme/api/models
 
 Conține clase POJO pentru request body:
 
- 1.RegisterRequest
- 2.LoginRequest
- 3.UpdateProfileRequest
+ 1. RegisterRequest
+ 2. LoginRequest
+ 3. UpdateProfileRequest
 com/hapifyme/api/utils
 
 Conține clase utilitare:
 
- 1.DataGenerator - generează date dinamice pentru teste
- 2.ApiPoller - folosește Awaitility pentru a aștepta confirmation_token
+ 1. DataGenerator - generează date dinamice pentru teste
+ 2. ApiPoller - folosește Awaitility pentru a aștepta confirmation_token
 com/hapifyme/api/tests
 
 Conține testul E2E:
 
- 3.UserLifecycleTest
+ 3. UserLifecycleTest
 
 ## Rulare teste
 
@@ -100,8 +100,8 @@ După rularea testelor UI, raportul Cucumber se găsește aici: target/cucumber-
 
 ## Observații
 
- 1.Partea UI poate folosi setup-ul local/Docker din etapa anterioară a proiectului.
- 2.Partea API folosește URL-ul actualizat al aplicației hapifyMe.
- 3.Testele API creează date dinamice, confirmă contul, fac login, verifică profilul, actualizează profilul și șterg utilizatorul creat.
- 4.Awaitility este folosit pentru a aștepta generarea asincronă a token-ului de confirmare.
- 5.Dacă locatorii UI diferă pe versiunea locală a aplicației, se modifică doar clasele din pages, nu Step Definitions.
+ 1. Partea UI poate folosi setup-ul local/Docker din etapa anterioară a proiectului.
+ 2. Partea API folosește URL-ul actualizat al aplicației hapifyMe.
+ 3. Testele API creează date dinamice, confirmă contul, fac login, verifică profilul, actualizează profilul și șterg utilizatorul creat.
+ 4. Awaitility este folosit pentru a aștepta generarea asincronă a token-ului de confirmare.
+ 5. Dacă locatorii UI diferă pe versiunea locală a aplicației, se modifică doar clasele din pages, nu Step Definitions.
