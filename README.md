@@ -48,7 +48,7 @@ stepdefinitions  - pașii Cucumber
 runners          - clase de rulare Cucumber
 config           - configurări pentru teste
 
-##Componenta API Testing
+## Componenta API Testing
 
 Componenta API testează fluxul complet de viață al unui utilizator hapifyMe.
 
@@ -88,7 +88,7 @@ Conține testul E2E:
 
 UserLifecycleTest
 
-##Rulare teste
+## Rulare teste
 
 Pentru rularea tuturor testelor:
 
@@ -98,13 +98,13 @@ Pentru rulare cu date custom pentru partea UI:
 
 mvn clean test -DbaseUrl=https://test.hapifyme.com -DtestEmail=email@test.com -DtestPassword=ParolaTa
 
-##Raport HTML
+## Raport HTML
 
 După rularea testelor UI, raportul Cucumber se găsește aici:
 
 target/cucumber-report.html
 
-##Observații
+## Observații
 
 Partea UI poate folosi setup-ul local/Docker din etapa anterioară a proiectului.
 Partea API folosește URL-ul actualizat al aplicației hapifyMe.
