@@ -37,7 +37,7 @@ src/test/java
 src/test/resources
 └── features
 ```
-Componenta UI Testing
+## Componenta UI Testing
 
 Testele UI folosesc Cucumber, JUnit 4 și Selenide.
 
