@@ -119,3 +119,20 @@ mvn clean test -Dtest=UserLifecycleTest
 ## Screenshot cu pipeline-ul trecut:
 <img width="1336" height="392" alt="image" src="https://github.com/user-attachments/assets/19b78d2f-6782-46e2-b163-eb63da3f4d06" />
 
+## Test interesant implementat
+
+Un test important implementat este `UserLifecycleTest`, care validează complet ciclul de viață al unui utilizator în API-ul HapifyMe.
+
+Testul acoperă următorul flux:
+
+1. Înregistrarea unui utilizator nou cu date generate dinamic
+2. Așteptarea token-ului de confirmare folosind Awaitility
+3. Confirmarea contului prin endpoint-ul de confirm email
+4. Autentificarea utilizatorului și extragerea token-ului Bearer
+5. Verificarea profilului creat
+6. Actualizarea datelor de profil
+7. Ștergerea utilizatorului
+8. Verificarea negativă că utilizatorul nu mai există
+
+Un comportament interesant observat a fost faptul că unele endpoint-uri returnează HTTP 200 chiar și pentru răspunsuri de eroare, iar validarea trebuie făcută pe câmpul `status` din body-ul JSON.
+
