@@ -106,3 +106,12 @@ După rularea testelor UI, raportul Cucumber se găsește aici: target/cucumber-
  3. Testele API creează date dinamice, confirmă contul, fac login, verifică profilul, actualizează profilul și șterg utilizatorul creat.
  4. Awaitility este folosit pentru a aștepta generarea asincronă a token-ului de confirmare.
  5. Dacă locatorii UI diferă pe versiunea locală a aplicației, se modifică doar clasele din pages, nu Step Definitions.
+
+## GitHub Actions Pipeline
+
+Testele API rulează automat prin GitHub Actions la fiecare push pe branch-ul `main`.
+
+Workflow-ul execută comanda:
+
+```bash
+mvn clean test -Dtest=UserLifecycleTest
