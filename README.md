@@ -115,3 +115,7 @@ Workflow-ul execută comanda:
 
 ```bash
 mvn clean test -Dtest=UserLifecycleTest
+```
+## Screenshot cu pipeline-ul trecut:
+<img width="1336" height="392" alt="image" src="https://github.com/user-attachments/assets/19b78d2f-6782-46e2-b163-eb63da3f4d06" />
+
